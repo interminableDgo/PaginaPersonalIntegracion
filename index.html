@@ -414,6 +414,8 @@
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">Acerca de</a></li>
                 <li><a href="#practices" class="nav-link">Prácticas</a></li>
+                <li><a href="#tasks" class="nav-link">Tareas</a></li>
+                <li><a href="#final-project" class="nav-link">Proyecto Final</a></li>
             </ul>
         </div>
     </nav>
@@ -467,6 +469,10 @@
                                 <span class="tech-tag">API Optimization</span>
                             </div>
                             <div class="modal-info" style="display:none;">
+                                <div class="objective">Clasificar servicios de la nube en categorías utilizando una API de IA.</div>
+                                <div class="intro">Este ejercicio introduce la integración con modelos de lenguaje (OpenRouter) para automatizar la categorización de descripciones de servicios cloud.</div>
+                                <div class="development">Se implementó un clasificador en Python que consume la API, define el prompt, maneja variables de entorno y estructura las respuestas para optimizar costo y latencia.</div>
+                                <div class="conclusion">Se obtuvo un clasificador funcional y escalable que sirve como base para futuras mejoras y nuevas categorías.</div>
                                 <div class="learnings">Integración de APIs de IA, manejo de variables de entorno, clasificación automatizada de texto, arquitectura escalable y optimización de consumo de API.</div>
                                 <div class="github-link" data-url="https://github.com/interminableDgo/Ejercicio-Guiado-1"></div>
                                 <div class="code-files">
@@ -475,6 +481,191 @@
                                 </div>
                             </div>
                             <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="practice-2">
+                            <div class="practice-header">
+                                <div class="practice-icon"><i class="fas fa-robot"></i></div>
+                                <h3>Practica 2: Chat con Ollama y DeepSeek</h3>
+                            </div>
+                            <p class="description">
+                                Es una aplicación web en Flask que se conecta a Ollama para usar modelos de lenguaje locales (como DeepSeek, Llama 3 y Phi 3), con interfaz tipo chat, API RESTful, despliegue en Docker, manejo de errores e indicadores de estado, demostrando un desarrollo web moderno e integración fluida con IA local.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">Ollama</span>
+                                <span class="tech-tag">DeepSeek</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">HTML/CSS/JS</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Desarrollar una app de chat web que use modelos locales vía Ollama con backend Flask.</div>
+                                <div class="intro">Se plantea una solución on-prem/local para interacción con LLMs (DeepSeek, Llama 3, Phi 3), evitando dependencia de servicios externos.</div>
+                                <div class="development">Se construyó una API REST con Flask, interfaz tipo chat en HTML/CSS/JS con selección de modelo y estados, y se orquestó con Docker para facilitar ejecución y despliegue.</div>
+                                <div class="conclusion">La app entrega un chat funcional, extensible y contenerizado, listo para incorporar mejoras como streaming, historiales y autenticación.</div>
+                                <div class="learnings">Integración con modelos de IA locales, desarrollo de aplicaciones web con Flask, contenerización con Docker, APIs RESTful, interfaz de usuario moderna y responsiva, manejo de modelos de lenguaje local.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/Ollama-Flask-App"></div>
+                                <div class="practice-image" data-image-url="img/Practica2a.png"></div>
+                                <div class="code-files">
+                                    <span data-filename="app.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ollama-Flask-App/master/app.py"></span>
+                                    <span data-filename="templates/index.html" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ollama-Flask-App/master/templates/index.html"></span>
+                                    <span data-filename="requirements.txt" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ollama-Flask-App/master/requirements.txt"></span>
+                                    <span data-filename="docker-compose.yml" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ollama-Flask-App/master/docker-compose.yml"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="practice-3">
+                            <div class="practice-header">
+                                <div class="practice-icon"><i class="fas fa-book"></i></div>
+                                <h3>Practica 3: Biblioteca XML con XSLT</h3>
+                            </div>
+                            <p class="description">
+                                Sistema de gestión de biblioteca implementado con XML para almacenar datos de libros y XSLT para transformación y presentación. 
+                                Incluye funcionalidad de búsqueda por ISBN y generación de vistas estructuradas de la información bibliográfica.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">XML</span>
+                                <span class="tech-tag">XSLT</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Biblioteca Digital</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Crear un sistema de biblioteca digital usando XML para almacenar datos de libros y XSLT para transformación y búsqueda por ISBN.</div>
+                                <div class="intro">Este ejercicio introduce el manejo de datos estructurados con XML y su transformación mediante XSLT para crear interfaces de consulta y presentación de información bibliográfica.</div>
+                                <div class="development">Se implementó un archivo XML con estructura de biblioteca, hojas de estilo XSLT para transformación de datos, CSS para presentación visual, y funcionalidad de búsqueda por ISBN con filtrado dinámico.</div>
+                                <div class="conclusion">Se logró un sistema funcional de biblioteca digital que demuestra el poder de XML/XSLT para manejo de datos estructurados y generación de interfaces web dinámicas.</div>
+                                <div class="learnings">Estructuración de datos con XML, transformación con XSLT, diseño de interfaces con CSS, búsqueda y filtrado de información, gestión de bibliotecas digitales.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/EjercicioGuiado3"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Practica3a.png"></span>
+                                    <span data-image-url="img/Practica3b.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="libros2.xml" data-raw-url="https://raw.githubusercontent.com/interminableDgo/EjercicioGuiado3/main/libros2.xml"></span>
+                                    <span data-filename="libros.xsl" data-raw-url="https://raw.githubusercontent.com/interminableDgo/EjercicioGuiado3/main/libros.xsl"></span>
+                                    <span data-filename="estilo.css" data-raw-url="https://raw.githubusercontent.com/interminableDgo/EjercicioGuiado3/main/estilo.css"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tasks">
+            <div class="container">
+                <h2 class="section-title">Tareas de Investigación</h2>
+                <p class="section-subtitle">Análisis y documentación de conceptos fundamentales en tecnologías cloud y servicios web.</p>
+                
+                <div class="practices-grid">
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="task-1">
+                            <div class="practice-header">
+                                <div class="practice-icon"><i class="fas fa-cloud"></i></div>
+                                <h3>Tarea 1: Modelos de Servicios en la Nube</h3>
+                            </div>
+                            <p class="description">
+                                Análisis exhaustivo de los diferentes modelos de servicios en la nube: SaaS (Software as a Service), 
+                                IaaS (Infrastructure as a Service), PaaS (Platform as a Service) y FaaS (Function as a Service). 
+                                Incluye diagramas comparativos, casos de uso, ventajas y desventajas de cada modelo, 
+                                así como ejemplos prácticos de implementación en el mundo real.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Cloud Computing</span>
+                                <span class="tech-tag">SaaS</span>
+                                <span class="tech-tag">IaaS</span>
+                                <span class="tech-tag">PaaS</span>
+                                <span class="tech-tag">FaaS</span>
+                                <span class="tech-tag">Arquitectura Cloud</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Comprender y documentar los diferentes modelos de servicios en la nube, sus características distintivas, casos de uso y diferencias arquitectónicas.</div>
+                                <div class="intro">Esta investigación profundiza en los fundamentos de la computación en la nube, explorando los cuatro modelos principales de servicios y su evolución en el ecosistema tecnológico actual.</div>
+                                <div class="development">Se realizó un análisis comparativo detallado de cada modelo, incluyendo diagramas de arquitectura, tablas comparativas de características, ejemplos de proveedores líderes y casos de uso específicos para cada tipo de servicio.</div>
+                                <div class="conclusion">La investigación revela la importancia de seleccionar el modelo de servicio adecuado según las necesidades específicas del proyecto, considerando factores como escalabilidad, control, costos y complejidad de gestión.</div>
+                                <div class="learnings">Modelos de servicios cloud, arquitecturas distribuidas, escalabilidad horizontal y vertical, gestión de infraestructura, plataformas de desarrollo, funciones serverless, y estrategias de migración a la nube.</div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Tarea1a.png"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Documentación</button>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="task-2">
+                            <div class="practice-header">
+                                <div class="practice-icon"><i class="fas fa-file-pdf"></i></div>
+                                <h3>Tarea 2: Miniensayo: ¿Cloud-native o cloud-enabled?</h3>
+                            </div>
+                            <p class="description">
+                                Análisis de una aplicación real para determinar si es cloud-native o cloud-enabled, 
+                                evaluando sus características arquitectónicas, patrones de diseño, y nivel de integración 
+                                con servicios cloud. El miniensayo incluye comparaciones, casos de uso y conclusiones 
+                                sobre las ventajas y desventajas de cada enfoque.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Cloud-native</span>
+                                <span class="tech-tag">Cloud-enabled</span>
+                                <span class="tech-tag">Análisis de Arquitectura</span>
+                                <span class="tech-tag">Minienseyo</span>
+                                <span class="tech-tag">Aplicaciones Cloud</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Analizar una aplicación real para determinar si es cloud-native o cloud-enabled, evaluando sus características arquitectónicas y nivel de integración con servicios cloud.</div>
+                                <div class="intro">Este miniensayo explora las diferencias entre aplicaciones cloud-native y cloud-enabled, analizando una aplicación real para identificar sus patrones arquitectónicos y nivel de adopción de tecnologías cloud.</div>
+                                <div class="development">Se realizó un análisis detallado de una aplicación seleccionada, evaluando sus características como escalabilidad, resilencia, uso de servicios cloud, contenerización, y patrones de diseño para clasificarla como cloud-native o cloud-enabled.</div>
+                                <div class="conclusion">El análisis revela las ventajas y desventajas de cada enfoque, proporcionando insights valiosos sobre cuándo y cómo adoptar estrategias cloud-native vs cloud-enabled según las necesidades del proyecto.</div>
+                                <div class="learnings">Cloud-native vs cloud-enabled, análisis de arquitecturas, patrones de diseño cloud, escalabilidad, resilencia, contenerización, servicios cloud, y estrategias de migración.</div>
+                                
+                                <div class="pdf-files">
+                                    <span data-filename="Tarea 2 AldoP.pdf" data-pdf-url="img/Tarea 2 AldoP.pdf"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Documentación</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-project">
+            <div class="container">
+                <h2 class="section-title">Proyecto Final</h2>
+                <p class="section-subtitle">Documentación y evidencias del proyecto final de integración.</p>
+                
+                <div class="practices-grid">
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="evidence-1">
+                            <div class="practice-header">
+                                <div class="practice-icon"><i class="fas fa-file-alt"></i></div>
+                                <h3>Evidencia 1: Reporte Formal - Avance 1</h3>
+                            </div>
+                            <p class="description">
+                                Primer avance del reporte formal del proyecto final, documentando el progreso inicial, 
+                                metodología propuesta y planificación de actividades para el desarrollo del proyecto de integración.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Reporte Formal</span>
+                                <span class="tech-tag">Proyecto Final</span>
+                                <span class="tech-tag">Documentación</span>
+                                <span class="tech-tag">Avance 1</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="learnings">Documentación de proyecto, planificación de actividades, metodología de desarrollo, reportes formales.</div>
+                                <div class="pdf-files">
+                                    <span data-filename="Reporte Formal - Avance 1.pdf" data-pdf-url="img/Reporte Formal - Avance 1.pdf"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Documento</button>
                         </div>
                     </div>
                 </div>
@@ -495,8 +686,25 @@
                 <h2 id="modalTitle"></h2>
                 <p id="modalDescription"></p>
                 
+                <h4 id="objectiveHeading">Objetivo:</h4>
+                <p id="modalObjective"></p>
+                
+                <h4 id="introHeading">Introducción:</h4>
+                <p id="modalIntro"></p>
+                
+                <h4 id="developmentHeading">Desarrollo:</h4>
+                <p id="modalDevelopment"></p>
+                
+                <h4 id="conclusionHeading">Conclusión:</h4>
+                <p id="modalConclusion"></p>
+                
                 <h4>Aprendizajes Clave:</h4>
                 <p id="modalLearnings"></p>
+                
+                <div id="modalImages" style="display: none; margin: 2rem 0;">
+                    <h4>Capturas de Pantalla:</h4>
+                    <div id="imagesContainer"></div>
+                </div>
                 
                 <a href="#" id="modalGithubLink" target="_blank" class="btn btn-primary" style="display: inline-block; margin-bottom: 1.5rem;">
                     <i class="fab fa-github"></i> Ver Repositorio en GitHub
@@ -510,7 +718,10 @@
                             <i class="fas fa-copy"></i> Copiar
                         </button>
                     </div>
-                    <pre><code id="modalCodeContent">Selecciona un archivo para ver el código...</code></pre>
+                    <div id="modalContent">
+                        <pre><code id="modalCodeContent">Selecciona un archivo para ver el contenido...</code></pre>
+                        <iframe id="modalPDFContent" style="display: none; width: 100%; height: 500px; border: none; border-radius: 8px;"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -522,7 +733,7 @@
             const navbar = document.getElementById('navbar');
             const modal = document.getElementById('projectModal');
             const closeModalBtn = document.querySelector('.modal-close');
-            const openModalBtn = document.querySelector('.open-modal-btn');
+            const openModalBtns = document.querySelectorAll('.open-modal-btn');
             const copyCodeBtn = document.getElementById('copyCodeBtn');
             const codeContentEl = document.getElementById('modalCodeContent');
             const tabsContainer = document.getElementById('codeTabsContainer');
@@ -534,6 +745,13 @@
 
             // --- Función para cargar código ---
             const fetchCode = (url) => {
+                const codeContentEl = document.getElementById('modalCodeContent');
+                const pdfContentEl = document.getElementById('modalPDFContent');
+                
+                // Ocultar PDF y mostrar código
+                pdfContentEl.style.display = 'none';
+                codeContentEl.style.display = 'block';
+                
                 codeContentEl.textContent = 'Cargando código...';
                 fetch(url)
                     .then(response => {
@@ -549,44 +767,157 @@
                     });
             };
             
+            // --- Función para mostrar PDF ---
+            const showPDF = (url) => {
+                const codeContentEl = document.getElementById('modalCodeContent');
+                const pdfContentEl = document.getElementById('modalPDFContent');
+                
+                // Ocultar código y mostrar PDF
+                codeContentEl.style.display = 'none';
+                pdfContentEl.style.display = 'block';
+                pdfContentEl.src = url;
+            };
+            
             // --- Abrir y poblar el modal ---
-            openModalBtn.addEventListener('click', (e) => {
-                const card = e.target.closest('.practice-card');
-                const info = card.querySelector('.modal-info');
-                
-                // Poblar info general
-                document.getElementById('modalTitle').textContent = card.querySelector('h3').textContent;
-                document.getElementById('modalDescription').textContent = card.querySelector('.description').textContent;
-                document.getElementById('modalLearnings').textContent = info.querySelector('.learnings').textContent;
-                document.getElementById('modalGithubLink').href = info.querySelector('.github-link').dataset.url;
-                
-                // Generar pestañas para los archivos de código
-                tabsContainer.innerHTML = '';
-                const codeFiles = info.querySelectorAll('.code-files span');
-                codeFiles.forEach((fileSpan, index) => {
-                    const tab = document.createElement('button');
-                    tab.className = 'code-tab';
-                    tab.textContent = fileSpan.dataset.filename;
-                    tab.dataset.rawUrl = fileSpan.dataset.rawUrl;
+            openModalBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const card = e.target.closest('.practice-card');
+                    const info = card.querySelector('.modal-info');
                     
-                    tab.addEventListener('click', () => {
-                        // Cambiar la pestaña activa
-                        tabsContainer.querySelector('.active')?.classList.remove('active');
-                        tab.classList.add('active');
-                        // Cargar el código correspondiente
-                        fetchCode(tab.dataset.rawUrl);
-                    });
+                    // Poblar info general
+                    document.getElementById('modalTitle').textContent = card.querySelector('h3').textContent;
+                    document.getElementById('modalDescription').textContent = card.querySelector('.description').textContent;
+                    document.getElementById('modalLearnings').textContent = info.querySelector('.learnings').textContent;
                     
-                    tabsContainer.appendChild(tab);
-                    
-                    // Activar la primera pestaña por defecto
-                    if (index === 0) {
-                        tab.classList.add('active');
-                        fetchCode(tab.dataset.rawUrl);
+                    // Manejar enlace de GitHub si existe
+                    const githubLink = info.querySelector('.github-link');
+                    const modalGithubLink = document.getElementById('modalGithubLink');
+                    if (githubLink && githubLink.dataset.url && githubLink.dataset.url !== '#') {
+                        modalGithubLink.href = githubLink.dataset.url;
+                        modalGithubLink.style.display = 'inline-block';
+                    } else {
+                        modalGithubLink.style.display = 'none';
                     }
-                });
+                    
+                    // Poblar Objetivo / Introducción / Desarrollo / Conclusión si existen
+                    const setSection = (selector, contentElId, headingId) => {
+                        const src = info.querySelector(selector);
+                        const headingEl = document.getElementById(headingId);
+                        const contentEl = document.getElementById(contentElId);
+                        if (src && src.textContent.trim().length > 0) {
+                            contentEl.textContent = src.textContent.trim();
+                            headingEl.style.display = 'block';
+                            contentEl.style.display = 'block';
+                        } else {
+                            headingEl.style.display = 'none';
+                            contentEl.style.display = 'none';
+                            contentEl.textContent = '';
+                        }
+                    };
+                    setSection('.objective', 'modalObjective', 'objectiveHeading');
+                    setSection('.intro', 'modalIntro', 'introHeading');
+                    setSection('.development', 'modalDevelopment', 'developmentHeading');
+                    setSection('.conclusion', 'modalConclusion', 'conclusionHeading');
+                    
+                    // Manejar imágenes si existen
+                    const modalImages = document.getElementById('modalImages');
+                    const imagesContainer = document.getElementById('imagesContainer');
+                    
+                    // Limpiar contenedor de imágenes
+                    imagesContainer.innerHTML = '';
+                    
+                    // Buscar imágenes individuales (.practice-image) o múltiples (.practice-images)
+                    const singleImage = info.querySelector('.practice-image');
+                    const multipleImages = info.querySelectorAll('.practice-images span');
+                    
+                    if (singleImage && singleImage.dataset.imageUrl) {
+                        // Imagen única (Práctica 2)
+                        const img = document.createElement('img');
+                        img.src = singleImage.dataset.imageUrl;
+                        img.alt = 'Captura de pantalla del proyecto';
+                        img.style.cssText = 'width: 100%; max-width: 600px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 1rem;';
+                        imagesContainer.appendChild(img);
+                        modalImages.style.display = 'block';
+                    } else if (multipleImages.length > 0) {
+                        // Múltiples imágenes (Práctica 3)
+                        multipleImages.forEach((imageSpan, index) => {
+                            if (imageSpan.dataset.imageUrl) {
+                                const img = document.createElement('img');
+                                img.src = imageSpan.dataset.imageUrl;
+                                img.alt = `Captura de pantalla ${index + 1} del proyecto`;
+                                img.style.cssText = 'width: 100%; max-width: 600px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 1rem;';
+                                imagesContainer.appendChild(img);
+                            }
+                        });
+                        if (imagesContainer.children.length > 0) {
+                            modalImages.style.display = 'block';
+                        }
+                    } else {
+                        modalImages.style.display = 'none';
+                    }
+                    
+                    // Generar pestañas para archivos de código o PDF
+                    tabsContainer.innerHTML = '';
+                    const codeFiles = info.querySelectorAll('.code-files span');
+                    const pdfFiles = info.querySelectorAll('.pdf-files span');
+                    const codePreview = document.querySelector('.code-preview');
+                    
+                    if (codeFiles.length > 0) {
+                        // Mostrar archivos de código
+                        codePreview.style.display = 'block';
+                        codeFiles.forEach((fileSpan, index) => {
+                            const tab = document.createElement('button');
+                            tab.className = 'code-tab';
+                            tab.textContent = fileSpan.dataset.filename;
+                            tab.dataset.rawUrl = fileSpan.dataset.rawUrl;
+                            
+                            tab.addEventListener('click', () => {
+                                // Cambiar la pestaña activa
+                                tabsContainer.querySelector('.active')?.classList.remove('active');
+                                tab.classList.add('active');
+                                // Cargar el código correspondiente
+                                fetchCode(tab.dataset.rawUrl);
+                            });
+                            
+                            tabsContainer.appendChild(tab);
+                            
+                            // Activar la primera pestaña por defecto
+                            if (index === 0) {
+                                tab.classList.add('active');
+                                fetchCode(tab.dataset.rawUrl);
+                            }
+                        });
+                    } else if (pdfFiles.length > 0) {
+                        // Mostrar archivos PDF
+                        codePreview.style.display = 'block';
+                        pdfFiles.forEach((fileSpan, index) => {
+                            const tab = document.createElement('button');
+                            tab.className = 'code-tab';
+                            tab.textContent = fileSpan.dataset.filename;
+                            tab.dataset.pdfUrl = fileSpan.dataset.pdfUrl;
+                            
+                            tab.addEventListener('click', () => {
+                                // Cambiar la pestaña activa
+                                tabsContainer.querySelector('.active')?.classList.remove('active');
+                                tab.classList.add('active');
+                                // Mostrar el PDF
+                                showPDF(tab.dataset.pdfUrl);
+                            });
+                            
+                            tabsContainer.appendChild(tab);
+                            
+                            // Activar la primera pestaña por defecto
+                            if (index === 0) {
+                                tab.classList.add('active');
+                                showPDF(tab.dataset.pdfUrl);
+                            }
+                        });
+                    } else {
+                        codePreview.style.display = 'none';
+                    }
 
-                modal.classList.add('show');
+                    modal.classList.add('show');
+                });
             });
 
             // --- Lógica para cerrar el modal ---
@@ -598,7 +929,13 @@
             
             // --- Lógica para copiar código ---
             copyCodeBtn.addEventListener('click', () => {
-                if (codeContentEl.textContent.startsWith('Error') || codeContentEl.textContent.startsWith('Selecciona')) return;
+                const codeContentEl = document.getElementById('modalCodeContent');
+                const pdfContentEl = document.getElementById('modalPDFContent');
+                
+                // Solo permitir copiar si estamos viendo código, no PDF
+                if (pdfContentEl.style.display === 'block' || 
+                    codeContentEl.textContent.startsWith('Error') || 
+                    codeContentEl.textContent.startsWith('Selecciona')) return;
                 
                 navigator.clipboard.writeText(codeContentEl.textContent).then(() => {
                     copyCodeBtn.innerHTML = '<i class="fas fa-check"></i> Copiado';

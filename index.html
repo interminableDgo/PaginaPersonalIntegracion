@@ -64,6 +64,39 @@
             margin: 0 auto 4rem auto;
             color: var(--text-secondary);
         }
+        
+        /* Nuevo estilo para Título de Parcial */
+        .parcial-title {
+            font-size: 3rem; 
+            font-weight: 700;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-variant);
+            padding-bottom: 1rem;
+        }
+        
+        /* AJUSTES DE ESPACIADO CLAVE PARA UNIFICAR PARCIAL 1 Y 2 */
+        
+        /* 1. Eliminar padding inferior del contenedor principal del Parcial 1 */
+        #parcial-1 {
+            padding-bottom: 0rem; 
+        }
+
+        /* 2. Eliminar padding superior de las subsecciones que le siguen para que se peguen al título del parcial */
+        #practices, #tasks {
+            padding-top: 0rem; 
+        }
+        
+        /* 3. Ajustar el margen superior de los subtítulos de los Parciales 2 para mejor distribución */
+        #parcial-2 .section-title:first-of-type {
+            margin-top: 3rem !important;
+        }
+        #parcial-2 .section-title:nth-child(3) {
+            margin-top: 4rem !important;
+        }
+
 
         /* --- Navegación --- */
         .navbar {
@@ -404,6 +437,7 @@
             }
             .hero-title { font-size: 2.5rem; }
             .section-title { font-size: 2rem; }
+            .parcial-title { font-size: 2rem; }
         }
 
     </style>
@@ -414,8 +448,8 @@
             <a href="#hero" class="nav-logo">Aldo Peña - 635861</a>
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">Acerca de</a></li>
-                <li><a href="#practices" class="nav-link">Prácticas</a></li>
-                <li><a href="#tasks" class="nav-link">Tareas</a></li>
+                <li><a href="#parcial-1" class="nav-link">Primer Parcial</a></li>
+                <li><a href="#parcial-2" class="nav-link">Segundo Parcial</a></li>
                 <li><a href="#final-project" class="nav-link">Proyecto Final</a></li>
             </ul>
         </div>
@@ -428,7 +462,7 @@
             <p class="hero-description">
                 Un espacio para documentar mi viaje de aprendizaje explorando tecnologías en la materia de integración.
             </p>
-            <a href="#practices" class="btn btn-primary">Ver mis proyectos</a>
+            <a href="#parcial-1" class="btn btn-primary">Ver mis proyectos</a>
         </div>
     </header>
 
@@ -445,7 +479,13 @@
                 </div>
             </div>
         </section>
-
+        
+        <section id="parcial-1">
+            <div class="container">
+                <h2 class="parcial-title">Primer Parcial</h2>
+            </div>
+        </section>
+        
         <section id="practices">
             <div class="container">
                 <h2 class="section-title">Práctica Guiada</h2>
@@ -495,7 +535,7 @@
                                 Es una aplicación web en Flask que se conecta a Ollama para usar modelos de lenguaje locales (como DeepSeek, Llama 3 y Phi 3), con interfaz tipo chat, API RESTful, despliegue en Docker, manejo de errores e indicadores de estado, demostrando un desarrollo web moderno e integración fluida con IA local.
                             </p>
                             <div class="tech-tags">
-                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag>Python</span>
                                 <span class="tech-tag">Flask</span>
                                 <span class="tech-tag">Ollama</span>
                                 <span class="tech-tag">DeepSeek</span>
@@ -674,7 +714,230 @@
                 </div>
             </div>
         </section>
+        
+        <section id="parcial-2">
+            <div class="container">
+                <h2 class="parcial-title">Segundo Parcial</h2>
+                
+                <h2 class="section-title" style="margin-top: 3rem;">Prácticas Guiadas</h2>
+                <p class="section-subtitle">Ejercicios de integración desarrollados para el segundo parcial.</p>
+                
+                <div class="practices-grid">
+                    
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="practice-4">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #904ae2;"><i class="fas fa-key"></i></div>
+                                <h3>Practica 4: Microservicio de Autenticación JWT</h3>
+                            </div>
+                            <p class="description">
+                                Microservicio en Flask que utiliza **JWT (JSON Web Token)** para autenticar usuarios contra una base de datos. 
+                                El microservicio permite registrar usuarios, iniciar sesión, generar tokens JWT y proteger rutas que 
+                                solo se puedan acceder con un token válido.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Auth</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Implementar un microservicio de autenticación seguro y escalable usando JSON Web Tokens (JWT) en Flask.</div>
+                                <div class="intro">Esta práctica se centra en el desarrollo de un microservicio que gestiona la autenticación de usuarios mediante el estándar JWT, una pieza clave en la arquitectura de microservicios modernos. El uso de JWT permite la validación de identidad sin necesidad de mantener estados de sesión en el servidor.</div>
+                                <div class="development">Se desarrolló la lógica de registro, login y generación de tokens JWT en Python/Flask. Se implementó un decorador para proteger endpoints que requieren autenticación, se configuró la conexión a la base de datos para la gestión de usuarios, y se preparó la aplicación para contenerización con Docker.</div>
+                                <div class="conclusion">Se logró un microservicio de autenticación desacoplado y seguro, capaz de emitir tokens que permiten a otros servicios validar la identidad del usuario sin necesidad de acceder a la base de datos de credenciales. La solución es eficiente y fácilmente integrable en arquitecturas distribuidas.</div>
+                                <div class="learnings">Autenticación basada en tokens (**JWT**), desarrollo de microservicios con **Flask**, manejo de **hashing de contraseñas**, protección de rutas (**decorators**), despliegue y orquestación con **Docker**.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/JWTauth"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-07 000642.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-07 000724.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-07 000826.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-07 000919.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-07 000948.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-17 022730.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-17 023021.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-17 023711.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-17 024140.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 4/Screenshot 2025-10-17 024153.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="app.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauth/main/flask-microservice/app.py"></span>
+                                    <span data-filename="Dockerfile" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauth/main/flask-microservice/Dockerfile"></span>
+                                    <span data-filename="requirements.txt" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauth/main/flask-microservice/requirements.txt"></span>
+                                    <span data-filename="static/books.xsl" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauth/main/flask-microservice/static/books.xsl"></span>
+                                    <span data-filename="templates/login.html" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauth/main/flask-microservice/templates/login.html"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="practice-5">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #e24a90;"><i class="fas fa-database"></i></div>
+                                <h3>Practica 5: Microservicio de Libros con Redis y JWT</h3>
+                            </div>
+                            <p class="description">
+                                Implementación de una **API RESTful para la gestión de un catálogo de libros**, donde la seguridad de todas las rutas CRUD está garantizada por **JSON Web Tokens (JWT)**. La innovación clave es la integración de **Redis** como una capa de soporte de alta velocidad para la gestión de tokens, incluyendo la **revocación de sesiones** (mediante *allowlist/denylist*) y la implementación de un mecanismo de **Refresh Token** para mejorar la experiencia de usuario y seguridad.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Microservicios</span>
+                                <span class="tech-tag">Seguridad</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Diseñar e implementar un Microservicio de Catálogo de Libros, utilizando Redis como base de datos en memoria para gestionar y controlar de manera estricta el ciclo de vida y la revocación de tokens de seguridad JWT.</div>
+                                <div class="intro">Para un sistema que requiere alta seguridad y un control estricto sobre las sesiones, la implementación del par Access/Refresh Token es esencial. Esta práctica extiende la funcionalidad JWT básica (Práctica 4) al integrar Redis, lo que permite la gestión de listas blancas/negras para tokens, posibilitando la revocación inmediata de sesiones, una característica vital que el JWT por sí solo no ofrece.</div>
+                                <div class="development">Se desarrolló el backend en Flask para el catálogo de libros, protegiendo todos los endpoints CRUD (`/books`). Se configuró la conexión a Redis para almacenar los tokens de acceso y refresh válidos (allowlist). Se implementó la lógica de revocación (marcando tokens en la denylist) y se creó un endpoint `/refresh` para emitir nuevos Access Tokens sin requerir el login nuevamente. La solución fue desplegada en Google Cloud Platform.</div>
+                                <div class="conclusion">Se construyó una solución de autenticación robusta y desacoplada, apta para ser consumida por cualquier cliente o microservicio que necesite asegurar sus rutas. La adopción de JWT garantiza seguridad y mejora la escalabilidad al eliminar la necesidad de almacenamiento de sesiones en el servidor.</div>
+                                <div class="learnings">Integración de **Redis** para gestión de caché y sesiones, implementación de **Access/Refresh Tokens** para seguridad, gestión de **revocación de tokens (allowlist/denylist)**, desarrollo de endpoints **RESTful seguros**, y orquestación de un ecosistema de microservicios (Flask + Redis).</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/JWTauthRedis"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots Practica 5/Screenshot 2025-10-17 022209.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 5/Screenshot 2025-10-17 034937.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 5/Screenshot 2025-10-17 034948.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 5/Screenshot 2025-10-17 035000.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 5/Screenshot 2025-10-17 035019.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 5/Screenshot 2025-10-17 035031.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="app.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauthRedis/main/flask-microservice/app.py"></span>
+                                    <span data-filename="requirements.txt" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauthRedis/main/flask-microservice/requirements.txt"></span>
+                                    <span data-filename="Dockerfile" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauthRedis/main/flask-microservice/Dockerfile"></span>
+                                    <span data-filename="static/script.js" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauthRedis/main/flask-microservice/static/script.js"></span>
+                                    <span data-filename="templates/catalogue.html" data-raw-url="https://raw.githubusercontent.com/interminableDgo/JWTauthRedis/main/flask-microservice/templates/catalogue.html"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
 
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="practice-6">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #3c9f3a;"><i class="fas fa-desktop"></i></div>
+                                <h3>Practica 6: Cliente GUI en Python (TKinter)</h3>
+                            </div>
+                            <p class="description">
+                                Cliente de autenticación con arquitectura **Modelo-Vista-Controlador (MVC)**, implementado en **Python con TKinter**. Gestiona el ciclo de vida de los **JWT tokens**, realiza monitoreo automático de la salud de los microservicios, y utiliza validaciones robustas y *logging* profesional para una interfaz de escritorio autónoma y segura.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TKinter</span>
+                                <span class="tech-tag">MVC Architecture</span>
+                                <span class="tech-tag">REST Client</span>
+                                <span class="tech-tag">JWT Handling</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Desarrollar una aplicación gráfica de escritorio (GUI) en Python (Tkinter) capaz de consumir de forma segura los endpoints de microservicios REST, implementando un manejo robusto de la autenticación y el monitoreo de servicio.</div>
+                                <div class="intro">Aunque las GUIs modernas suelen ser web, este proyecto demuestra la capacidad de Python para crear clientes de escritorio ligeros y potentes que interactúan con arquitecturas de microservicios. La arquitectura MVC asegura la separación de la lógica de negocio (manejo de JWT y APIs) de la interfaz de usuario (Tkinter).</div>
+                                <div class="development">El cliente fue construido bajo el patrón MVC, separando la interfaz visual de la lógica de red y del modelo de datos. Se implementó el manejo de operaciones asíncronas para evitar el bloqueo de la GUI. Funcionalidades clave incluyen el inicio de sesión, la visualización de libros consumidos por la API y un módulo de *health check* para monitorear el estado del microservicio backend. Se incorporaron *logging* y persistencia de configuración para mejorar el desarrollo y la experiencia de usuario.</div>
+                                <div class="conclusion">Se logró un cliente de escritorio funcional y bien estructurado que sirve como una prueba de concepto sólida para la integración de Tkinter con servicios web modernos. El uso de MVC, el manejo de JWT y el monitoreo activo demuestran un alto nivel de competencia en el desarrollo de clientes para microservicios.</div>
+                                <div class="learnings">Implementación de arquitectura **MVC** en Python, desarrollo de **GUIs de escritorio con TKinter**, manejo de **peticiones HTTP seguras**, gestión del ciclo de vida de **JWT** en una aplicación cliente, y aplicación de **patrones de diseño de software** para sistemas distribuidos.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/GUIjwtt"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots Practica 6/Screenshot 2025-10-17 045709.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 6/Screenshot 2025-10-17 045757.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 6/Screenshot 2025-10-17 045702.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="gui_simple.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/GUIjwtt/main/gui_simple.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="section-title" style="margin-top: 4rem;">Tareas de Investigación</h2>
+                <p class="section-subtitle">Análisis y documentación para el segundo parcial.</p>
+                
+                <div class="practices-grid">
+                    
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="task-4">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #f89820;"><i class="fas fa-code"></i></div>
+                                <h3>Tarea 4: Cliente GUI de Autenticación en Java</h3>
+                            </div>
+                            <p class="description">
+                                Implementación de un **Cliente GUI de escritorio en Java** diseñado para consumir los microservicios protegidos por JWT. Al igual que su contraparte en Python, este cliente utiliza una **arquitectura MVC** para la gestión de tokens, el monitoreo del servicio (health check) y la interacción con rutas de API seguras, demostrando la **interoperabilidad** de la arquitectura de microservicios.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Swing/AWT</span>
+                                <span class="tech-tag">MVC</span>
+                                <span class="tech-tag">REST Client</span>
+                                <span class="tech-tag">Interoperabilidad</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Desarrollar un cliente de escritorio en Java (utilizando Swing o AWT) capaz de interoperar con el microservicio de autenticación de Python (Práctica 4/5), validando la arquitectura orientada a servicios.</div>
+                                <div class="intro">Este ejercicio busca validar el principio de interoperabilidad inherente a las arquitecturas de microservicios, donde clientes escritos en diferentes lenguajes (Python y Java) pueden consumir el mismo backend RESTful, asegurando la autenticación vía JWT.</div>
+                                <div class="development">Se construyó el cliente Java, enfocándose en la capa de red para manejar las peticiones HTTP y la deserialización de respuestas JSON (incluyendo los tokens JWT). Se implementó la lógica de la vista (interfaz gráfica) y el controlador para enviar credenciales, recibir el token y usarlo para acceder a rutas protegidas. Se incluyeron funcionalidades de logging y manejo de errores específicos de Java.</div>
+                                <div class="conclusion">La implementación exitosa del cliente Java confirma que la arquitectura de microservicios basada en REST y JWT es independiente del lenguaje. La aplicación funciona como una herramienta de prueba para el backend y demuestra la capacidad de Java para integrarse en ecosistemas políglotas de servicios.</div>
+                                <div class="learnings">Desarrollo de **GUIs de escritorio en Java** (Swing/AWT), manejo de peticiones **HTTP** en Java, consumo de APIs **RESTful**, validación de **JWT** para control de acceso en el cliente, y el concepto de **interoperabilidad** entre lenguajes.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/GUIjwttJava"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots Tarea 4/Screenshot 2025-10-17 055801.png"></span>
+                                    <span data-image-url="img/Screenshots Tarea 4/Screenshot 2025-10-17 055813.png"></span>
+                                    <span data-image-url="img/Screenshots Tarea 4/Screenshot 2025-10-17 055819.png"></span>
+                                    <span data-image-url="img/Screenshots Tarea 4/Screenshot 2025-10-17 055827.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="SimpleClient.java" data-raw-url="https://raw.githubusercontent.com/interminableDgo/GUIjwttJava/main/SimpleClient.java"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="task-5">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #ffc107; color: #121212;"><i class="fas fa-tachometer-alt"></i></div>
+                                <h3>Tarea 5: Comparativa de Rendimiento (Redis vs MariaDB)</h3>
+                            </div>
+                            <p class="description">
+                                Aplicación de consola en **Python** diseñada para **comparar el rendimiento** de las bases de datos **Redis** (In-Memory) y **MariaDB** (Relacional) en escenarios de alto volumen de datos. La simulación mide los tiempos de respuesta para operaciones de **inserción y lectura** (registro y autenticación de usuarios), ofreciendo una perspectiva práctica sobre cuándo elegir cada tecnología para optimización de acceso a datos.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">MariaDB</span>
+                                <span class="tech-tag">Benchmarking</span>
+                                <span class="tech-tag">Bases de Datos</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Desarrollar una herramienta de benchmarking en Python para medir y comparar el rendimiento de Redis y MariaDB en operaciones críticas de lectura y escritura (simulación de autenticación y registro).</div>
+                                <div class="intro">En la arquitectura de microservicios, la elección de la base de datos es crucial para la eficiencia. Esta actividad se centró en cuantificar las diferencias de latencia entre una base de datos en memoria (Redis), ideal para caching y sesiones, y una relacional persistente (MariaDB), midiendo el impacto real en el rendimiento.</div>
+                                <div class="development">Se implementó un script en Python que realiza series de pruebas controladas. El programa gestiona las conexiones a ambos sistemas (MariaDB para persistencia simulada y Redis para caché/sesiones simuladas), ejecuta operaciones repetitivas (INSERT/SET y SELECT/GET) y utiliza la librería `time` para registrar métricas detalladas de tiempo de ejecución para cada sistema.</div>
+                                <div class="conclusion">La actividad demostró que, mientras MariaDB es esencial para la persistencia transaccional, Redis ofrece órdenes de magnitud de mayor velocidad en operaciones de lectura y escritura simples, confirmando su rol como la capa de acceso rápido para tokens, sesiones o datos de baja latencia en arquitecturas de integración modernas.</div>
+                                <div class="learnings">Conexión y manipulación de datos con **MariaDB y Redis en Python**, técnicas de **benchmarking y medición de rendimiento**, comprensión práctica de las ventajas de las bases de datos **In-Memory** frente a las **Relacionales**, y optimización de flujos de trabajo de **autenticación/registro**.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/RedisvsMariaDB"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 5/Screenshot 2025-10-17 062828.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="hola.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/RedisvsMariaDB/main/hola.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="task-6-placeholder" style="visibility: hidden; display: none;">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="final-project">
             <div class="container">
                 <h2 class="section-title">Proyecto Final</h2>
@@ -698,9 +961,33 @@
                                 <span class="tech-tag">Avance 1</span>
                             </div>
                             <div class="modal-info" style="display:none;">
-                                <div class="learnings">Documentación de proyecto, planificación de actividades, metodología de desarrollo, reportes formales.</div>
+                                <div class="learnings">Documentación de proyecto, planificación de actividades, metodología de desarrollo, reportes formalas.</div>
                                 <div class="pdf-files">
                                     <span data-filename="Reporte Formal - Avance 1.pdf" data-pdf-url="img/Reporte Formal - Avance 1.pdf"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Documento</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="evidence-2">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #20c997;"><i class="fas fa-file-invoice"></i></div>
+                                <h3>Evidencia 2: Reporte Formal - Avance 2</h3>
+                            </div>
+                            <p class="description">
+                                Segundo avance del reporte formal del proyecto final. Incluye detalles sobre la arquitectura elegida (microservicios), el diseño de la API y el progreso en la implementación de la seguridad basada en tokens.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Reporte Formal</span>
+                                <span class="tech-tag">Proyecto Final</span>
+                                <span class="tech-tag">Documentación</span>
+                                <span class="tech-tag">Avance 2</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="learnings">Documentación de arquitectura de microservicios, diseño de APIs, planificación de la seguridad y validación de tecnologías.</div>
+                                <div class="pdf-files">
+                                    <span data-filename="Reporte Formal - Avance 2.pdf" data-pdf-url="img/Reporte Formal - Avance 2.pdf"></span>
                                 </div>
                             </div>
                             <button class="btn btn-secondary open-modal-btn">Ver Documento</button>
@@ -789,7 +1076,10 @@
             });
             const modal = document.getElementById('projectModal');
             const closeModalBtn = document.querySelector('.modal-close');
-            const openModalBtns = document.querySelectorAll('.open-modal-btn');
+            
+            // Re-obtener los botones CADA VEZ que se ejecuta la carga del DOM para mayor robustez
+            const openModalBtns = document.querySelectorAll('.open-modal-btn'); 
+            
             const copyCodeBtn = document.getElementById('copyCodeBtn');
             const codeContentEl = document.getElementById('modalCodeContent');
             const tabsContainer = document.getElementById('codeTabsContainer');
@@ -840,10 +1130,15 @@
                     const card = e.target.closest('.practice-card');
                     const info = card.querySelector('.modal-info');
                     
+                    // Asegurarse de que el botón es para un elemento activo y no un placeholder (con 'disabled')
+                    if (e.target.disabled) return; 
+
                     // Poblar info general
                     document.getElementById('modalTitle').textContent = card.querySelector('h3').textContent;
                     document.getElementById('modalDescription').textContent = card.querySelector('.description').textContent;
-                    document.getElementById('modalLearnings').textContent = info.querySelector('.learnings').textContent;
+                    
+                    const learningsEl = info.querySelector('.learnings');
+                    document.getElementById('modalLearnings').textContent = learningsEl ? learningsEl.textContent : 'Información pendiente.';
                     
                     // Manejar enlace de GitHub si existe
                     const githubLink = info.querySelector('.github-link');
@@ -895,7 +1190,7 @@
                         imagesContainer.appendChild(img);
                         modalImages.style.display = 'block';
                     } else if (multipleImages.length > 0) {
-                        // Múltiples imágenes (Práctica 3)
+                        // Múltiples imágenes (Práctica 3, 4, 5, 6)
                         multipleImages.forEach((imageSpan, index) => {
                             if (imageSpan.dataset.imageUrl) {
                                 const img = document.createElement('img');
@@ -921,6 +1216,8 @@
                     if (codeFiles.length > 0) {
                         // Mostrar archivos de código
                         codePreview.style.display = 'block';
+                        copyCodeBtn.style.display = 'inline-block';
+                        
                         codeFiles.forEach((fileSpan, index) => {
                             const tab = document.createElement('button');
                             tab.className = 'code-tab';
@@ -946,6 +1243,8 @@
                     } else if (pdfFiles.length > 0) {
                         // Mostrar archivos PDF
                         codePreview.style.display = 'block';
+                        copyCodeBtn.style.display = 'none'; // Ocultar el botón de copiar para PDF
+                        
                         pdfFiles.forEach((fileSpan, index) => {
                             const tab = document.createElement('button');
                             tab.className = 'code-tab';

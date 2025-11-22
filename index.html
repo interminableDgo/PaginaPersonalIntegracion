@@ -450,6 +450,7 @@
                 <li><a href="#about" class="nav-link">Acerca de</a></li>
                 <li><a href="#parcial-1" class="nav-link">Primer Parcial</a></li>
                 <li><a href="#parcial-2" class="nav-link">Segundo Parcial</a></li>
+                <li><a href="#parcial-3" class="nav-link">Tercer Parcial</a></li>
                 <li><a href="#final-project" class="nav-link">Proyecto Final</a></li>
             </ul>
         </div>
@@ -936,6 +937,383 @@
                             </div>
                     </div>
                 </div>
+                </div>
+        </section>
+        <section id="parcial-3">
+            <div class="container">
+                <h2 class="parcial-title">Tercer Parcial</h2>
+
+                <h2 class="section-title" style="margin-top: 3rem;">Prácticas Guiadas</h2>
+                <p class="section-subtitle">Proyectos y tareas desarrolladas durante el tercer parcial.</p>
+
+                <div class="practices-grid">
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="practice-7">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #4a90e2;"><i class="fas fa-vial"></i></div>
+                                <h3>Práctica 7: Ejercicio Locust - Microservicio Libros</h3>
+                            </div>
+                            <p class="description">Prueba de carga y evaluación de rendimiento del Microservicio de Libros usando Locust para simular múltiples usuarios concurrentes.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">Load Testing</span>
+                                <span class="tech-tag">Microservicios</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Evaluar el comportamiento y la escalabilidad del microservicio de catálogo de libros bajo carga mediante escenarios definidos en Locust.</div>
+                                <div class="intro">Se configura un entorno de pruebas donde Locust genera tráfico simulado hacia los endpoints CRUD del microservicio de libros, permitiendo identificar cuellos de botella, tiempos de respuesta y consumo de recursos.</div>
+                                <div class="development">Se desarrollaron scripts en Python para Locust (`locust_file.py`) que definen distintos usuarios y tareas representativas (listar libros, obtener detalles por ID, crear y eliminar entradas). Se registra métricas de latencia, tasas de error y se realizan pruebas con diferentes niveles de concurrencia para validar la resistencia del servicio.</div>
+                                <div class="conclusion">Las pruebas permitieron identificar endpoints con mayor latencia bajo carga y confirmar el comportamiento estable del servicio hasta el umbral definido. Se obtuvieron recomendaciones para optimización (caching, límites de tasa y mejora de consultas).</div>
+                                <div class="learnings">Diseño de escenarios de carga con Locust, interpretación de métricas de rendimiento, identificación de puntos de mejora en microservicios REST y mejores prácticas para pruebas de stress y escalabilidad.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/Ejercicio-Guiado-1-Parcial-3"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots Practica 7/Locust.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 7/Screenshot 2025-11-21 183254.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 7/Screenshot 2025-11-21 183409.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="app.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ejercicio-Guiado-1-Parcial-3/main/app.py"></span>
+                                    <span data-filename="locust_file.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ejercicio-Guiado-1-Parcial-3/main/locust_file.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="practice-8">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #20c997;"><i class="fas fa-hdd"></i></div>
+                                <h3>Práctica 8: Buckets en GCP</h3>
+                            </div>
+                            <p class="description">Implementación y pruebas con buckets en Google Cloud Storage: subida, descarga y políticas de acceso para el microservicio de archivos.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">GCP</span>
+                                <span class="tech-tag">Cloud Storage</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Integración</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Configurar y validar el uso de Google Cloud Storage para almacenar y servir archivos del microservicio, gestionando credenciales y permisos adecuados.</div>
+                                <div class="intro">Se presenta un ejercicio práctico para crear buckets en GCP, configurar credenciales y realizar operaciones programáticas (upload/download/list) desde el microservicio desarrollado en Python.</div>
+                                <div class="development">Se proporcionó un ejemplo en `app.py` que utiliza la librería oficial de GCP para conectar con Cloud Storage usando el archivo de credenciales `gcp-credentials.json`. El repositorio incluye scripts de ejemplo y un `requirements.txt` con las dependencias necesarias. Se realizaron pruebas manuales y automatizadas para comprobar la integridad de los ficheros transferidos y las políticas de acceso.</div>
+                                <div class="conclusion">La integración con Cloud Storage facilita la gestión de activos estáticos del servicio y mejora la escalabilidad. Se documentaron pasos para la creación del bucket, asignación de roles y el manejo seguro de credenciales en entornos de despliegue.</div>
+                                <div class="learnings">Uso de SDK de GCP en Python, manejo seguro de credenciales, buenas prácticas para buckets públicos/privados, y cómo integrar almacenamiento en la arquitectura de microservicios.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/Ejercicio-2"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots Practica 8/Screenshot 2025-10-30 105823.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 8/Screenshot 2025-10-30 105837.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 8/Screenshot 2025-11-21 183749.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="app.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ejercicio-2/main/app.py"></span>
+                                    <span data-filename="gcp-credentials.json" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ejercicio-2/main/gcp-credentials.json"></span>
+                                    <span data-filename="requirements.txt" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ejercicio-2/main/requirements.txt"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="practice-9">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #ffc107; color: #121212;"><i class="fas fa-sitemap"></i></div>
+                                <h3>Práctica 9: Buckets en GCP con Swagger</h3>
+                            </div>
+                            <p class="description">Integración de Google Cloud Storage con documentación Swagger/OpenAPI para exponer endpoints de gestión de archivos del microservicio.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">GCP</span>
+                                <span class="tech-tag">Cloud Storage</span>
+                                <span class="tech-tag">Swagger</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Implementar y documentar endpoints REST para operaciones con buckets (upload, download, list, delete) usando Swagger para facilitar pruebas y consumo por terceros.</div>
+                                <div class="intro">Este ejercicio combina el uso de Google Cloud Storage para el almacenamiento de archivos y Swagger/OpenAPI para documentar y probar los endpoints del microservicio, permitiendo a desarrolladores interactuar con la API desde una interfaz auto-generada.</div>
+                                <div class="development">Se desarrolló un microservicio en Python (`app.py`) que expone rutas para interactuar con Cloud Storage y se integró Swagger (por ejemplo, mediante `flask-restx` o `flasgger`) para generar la documentación interactiva (`index.html` en el repositorio). El repositorio incluye los archivos principales y ejemplos de configuración.</div>
+                                <div class="conclusion">La documentación Swagger facilita la validación funcional y el testing manual de los endpoints, acelerando la integración con otros servicios y garantizando contratos claros de la API.</div>
+                                <div class="learnings">Cómo combinar Cloud Storage con un microservicio REST, generar documentación Swagger/OpenAPI, exponer endpoints seguros y probar operaciones de almacenamiento programáticamente.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/Ejercicio-3-"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots Practica 9/Screenshot 2025-11-21 190417.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 9/Screenshot 2025-11-21 190941.png"></span>
+                                    <span data-image-url="img/Screenshots Practica 9/Screenshot 2025-11-21 191151.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="app.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ejercicio-3-/main/app.py"></span>
+                                    <span data-filename="index.html" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Ejercicio-3-/main/index.html"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 4rem;">Tareas</h2>
+                <p class="section-subtitle">Tareas asignadas durante el tercer parcial.</p>
+
+                <div class="practices-grid">
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="tarea-6">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #e24a90;"><i class="fas fa-tachometer-alt"></i></div>
+                                <h3>Tarea 6: Prueba Baseline (Locust)</h3>
+                            </div>
+                            <p class="description">Prueba baseline: carga ligera constante (50 usuarios durante 5 minutos) para revisar el comportamiento de los microservicios.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">Load Testing</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Microservicios</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Realizar una prueba baseline de carga ligera constante (50 usuarios, 5 minutos) para medir tiempos de respuesta y estabilidad de los microservicios.</div>
+                                <div class="intro">Se define un escenario de tráfico estable para simular condiciones operativas básicas y obtener una línea base de rendimiento que sirva como referencia para futuras pruebas de escalado o stress.</div>
+                                <div class="development">Se incluye el archivo `locustfile.py` que implementa los usuarios y tareas a ejecutar por Locust. Tras ejecutar la prueba se genera un `reporte_baseline.html` con métricas de latencia, throughput y errores para su análisis.</div>
+                                <div class="conclusion">La prueba baseline entrega una medición inicial de la capacidad del sistema bajo carga ligera y permite detectar endpoints con comportamiento fuera de lo esperado, sirviendo para priorizar mejoras.</div>
+                                <div class="learnings">Cómo definir un escenario baseline en Locust, interpretar el reporte HTML, buenas prácticas para pruebas reproducibles y recomendaciones para monitoreo durante pruebas de carga.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/PruebaBaseLine"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 6/Screenshot 2025-11-21 194850.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 6/Screenshot 2025-11-21 200022.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 6/Screenshot 2025-11-21 200150.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="locustfile.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/PruebaBaseLine/main/locustfile.py"></span>
+                                    <span data-filename="reporte_baseline.html" data-raw-url="https://raw.githubusercontent.com/interminableDgo/PruebaBaseLine/main/reporte_baseline.html"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="tarea-7">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #6f42c1;"><i class="fas fa-bolt"></i></div>
+                                <h3>Tarea 7: Prueba Smoke (Locust)</h3>
+                            </div>
+                            <p class="description">Prueba smoke: 1–5 usuarios para verificación rápida de disponibilidad y respuestas básicas de los microservicios.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">Smoke Test</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Microservicios</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Verificar rápidamente la disponibilidad y comportamiento básico de los endpoints clave mediante una prueba smoke con 1–5 usuarios concurrentes.</div>
+                                <div class="intro">Las pruebas smoke permiten confirmar que el servicio responde y que las rutas críticas están operativas antes de ejecutar pruebas más intensivas o desplegar cambios en producción.</div>
+                                <div class="development">Se incluye `locustfile.py` que define usuarios y tareas ligeras (ping, listar, obtener por ID). La prueba se ejecuta con baja concurrencia para validar latencias iniciales y verificar que no existan errores obvios en los endpoints.</div>
+                                <div class="conclusion">La prueba smoke confirma la salud mínima del servicio y sirve como control rápido previo a pruebas más profundas; cualquier fallo detectado en esta etapa indica problemas que deben resolverse antes de escalar pruebas.</div>
+                                <div class="learnings">Cómo diseñar tests smoke reproducibles, configurar Locust para baja concurrencia, interpretar respuestas básicas y automatizar chequeos rápidos de disponibilidad.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/PruebaSmoke"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 7/Screenshot 2025-11-21 200600.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 7/Screenshot 2025-11-21 200644.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 7/Screenshot 2025-11-21 200855.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="locustfile.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/PruebaSmoke/main/locustfile.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="tarea-8">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #17a2b8;"><i class="fas fa-exchange-alt"></i></div>
+                                <h3>Tarea 8: Read-heavy vs Write-heavy (Locust)</h3>
+                            </div>
+                            <p class="description">Prueba para ajustar la proporción de operaciones GET vs POST y comparar rendimiento en escenarios read-heavy y write-heavy.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">Benchmark</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Microservicios</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Comparar el rendimiento del servicio bajo distintas proporciones de operaciones de lectura y escritura para identificar impactos sobre latencia y errores.</div>
+                                <div class="intro">Se definen escenarios donde la carga se inclina hacia lecturas (read-heavy) o escrituras (write-heavy) modificando las tareas de Locust para ajustar la probabilidad de GET/POST.</div>
+                                <div class="development">En el repositorio se incluye `locustfile.py` y `micIn.py` que definen los usuarios y las funciones de interacción con los endpoints. Se ejecutan pruebas con distintas proporciones (por ejemplo, 90/10 read/write y 30/70 read/write) y se recogen métricas para comparar throughput, latencia y tasa de errores.</div>
+                                <div class="conclusion">Las pruebas permiten identificar cómo cambian las métricas según la naturaleza de la carga y ayudan a priorizar optimizaciones en rutas críticas (por ejemplo, optimizar consultas, aplicar caching o mejoras en persistencia).</div>
+                                <div class="learnings">Diseño de escenarios read/write en Locust, interpretación comparativa de resultados, recomendaciones para balanceo de operaciones y ajustes de arquitectura según patrón de carga.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/Prueba-read-heavy-vs-write-heavy-"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 8/Screenshot 2025-11-21 203021.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 8/Screenshot 2025-11-21 204144.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="locustfile.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Prueba-read-heavy-vs-write-heavy-/main/locustfile.py"></span>
+                                    <span data-filename="micIn.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Prueba-read-heavy-vs-write-heavy-/main/micIn.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="tarea-9">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #fd7e14;"><i class="fas fa-chart-line"></i></div>
+                                <h3>Tarea 9: Ramp-up / Ramp-down (Locust)</h3>
+                            </div>
+                            <p class="description">Prueba con crecimiento y decrecimiento gradual usando `LoadTestShape` para simular ramp-up y ramp-down de usuarios.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">LoadTestShape</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Microservicios</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Simular un patrón de carga gradual para observar cómo responde el sistema durante aumentos y descensos de tráfico controlados.</div>
+                                <div class="intro">Se utiliza `LoadTestShape` de Locust para definir una curva de usuarios que sube hasta un pico y luego baja, reproduciendo escenarios de tráfico realistas y permitiendo analizar estabilidad y recuperación.</div>
+                                <div class="development">El repositorio incluye `locustfile.py` y `locust_slow.py` (ejemplo de `LoadTestShape`) que definen las tareas y la forma de la carga. Se ejecutan pruebas completas registrando métricas de latencia, errores y throughput durante todo el ciclo de carga.</div>
+                                <div class="conclusion">La prueba permite identificar puntos de fallo relacionados con cambios rápidos en la carga, verificar elasticidad y planear estrategias de escalado automático o mitigación.</div>
+                                <div class="learnings">Cómo diseñar curvas de carga con `LoadTestShape`, interpretar el impacto de ramp-up/ramp-down en la infraestructura y ajustar políticas de escalado y backpressure.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/unNdown"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 9/Screenshot 2025-11-21 203021.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 9/Screenshot 2025-11-21 204144.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="locust_slow.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/unNdown/main/locust_slow.py"></span>
+                                    <span data-filename="locustfile.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/unNdown/main/locustfile.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="tarea-10">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #dc3545;"><i class="fas fa-bomb"></i></div>
+                                <h3>Tarea 10: Prueba Spike (Locust)</h3>
+                            </div>
+                            <p class="description">Prueba spike: incremento abrupto de usuarios (por ejemplo, de 200 a 1000 en 10 segundos) para evaluar la resiliencia del sistema.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">Spike Test</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Microservicios</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Evaluar cómo responde la plataforma ante incrementos súbitos y masivos de tráfico, midiendo degradación, errores y tiempos de recuperación.</div>
+                                <div class="intro">Las pruebas spike simulan condiciones donde un aumento brusco de usuarios puede provocar sobrecarga; son útiles para validar límites, políticas de throttling y mecanismos de autoscaling.</div>
+                                <div class="development">El repositorio contiene `locust_spike.py` que define un escenario con un rápido aumento de usuarios. Se ejecuta la prueba y se capturan métricas clave (latencia, errores, throughput) para identificar fallos y puntos de saturación.</div>
+                                <div class="conclusion">La prueba muestra el comportamiento del sistema frente a cargas inesperadas y ayuda a definir medidas de mitigación como límites de conexión, colas y escalado automático agresivo.</div>
+                                <div class="learnings">Cómo diseñar pruebas spike reproducibles, interpretar picos de latencia y error, y aplicar estrategias de mitigación y escalado ante incrementos abruptos.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/Spike"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 10/Screenshot 2025-11-21 205932.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 10/Screenshot 2025-11-21 205958.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="locust_spike.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/Spike/main/locust_spike.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="tarea-11">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #007bff;"><i class="fas fa-hourglass-half"></i></div>
+                                <h3>Tarea 11: Prueba Soak (Locust)</h3>
+                            </div>
+                            <p class="description">Prueba soak: carga sostenida moderada durante al menos 30 minutos para identificar degradación, fugas de recursos y estabilidad a largo plazo.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">Soak Test</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Microservicios</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Evaluar la estabilidad del sistema bajo una carga sostenida moderada (>=30 minutos) para detectar memory leaks, degradación y problemas de estabilidad a largo plazo.</div>
+                                <div class="intro">Las pruebas soak permiten verificar el comportamiento del sistema en periodos prolongados y son clave para identificar problemas que no aparecen en pruebas cortas o de pico.</div>
+                                <div class="development">El repositorio incluye `locust_soak.py` que define el escenario de carga sostenida. Se ejecuta la prueba durante al menos 30 minutos y se monitorizan métricas como latencia, throughput, uso de memoria y errores para analizar tendencias.</div>
+                                <div class="conclusion">La prueba soak ayuda a identificar degradación progresiva y fugas de recursos; los resultados permiten planear mantenimiento, ajustes de recursos y mejoras en la gestión de memoria y conexiones.</div>
+                                <div class="learnings">Cómo diseñar pruebas soak reproducibles, monitoreo de métricas a largo plazo, detección de fugas de recursos y estrategias para mitigar degradación en entornos productivos.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/pruebaSoak"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 11/Screenshot 2025-11-21 212748.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="locust_soak.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/pruebaSoak/main/locust_soak.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="tarea-12">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #6610f2;"><i class="fas fa-bullseye"></i></div>
+                                <h3>Tarea 12: Prueba Break-point (Locust)</h3>
+                            </div>
+                            <p class="description">Incrementar la carga hasta encontrar el límite del servicio (punto de quiebre) y documentar fallos y comportamiento.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">Breakpoint Test</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Microservicios</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Encontrar el umbral máximo de usuarios/conexiones que el servicio puede soportar antes de degradarse o fallar.</div>
+                                <div class="intro">Este ejercicio busca identificar el punto de quiebre aumentando progresivamente la carga y documentando la aparición de errores, cola de peticiones y degradación de latencia.</div>
+                                <div class="development">El repositorio contiene varios scripts de prueba (`locust_breakpoint.py`, `locust_breakpoint_balanced.py`, `locust_breakpoint_extended.py`, `locust_breakpoint_super_fast.py`, `locust_stress_ultimate.py`) para distintos enfoques de búsqueda del breakpoint. Se ejecutan pruebas incrementales y se registra el comportamiento del sistema.</div>
+                                <div class="conclusion">Las pruebas permiten localizar el punto de fallo y aportar evidencia para ajustes de capacidad, optimización de código y estrategias de mitigación ante picos cercanos al punto de quiebre.</div>
+                                <div class="learnings">Cómo diseñar pruebas para encontrar el punto de quiebre, alternativas de scripting para diferentes estrategias (balanced/extended/super-fast) y cómo interpretar resultados para planificación de capacidad.</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/puntoQuiebre"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 12/Screenshot 2025-11-21 210555.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 12/Screenshot 2025-11-21 210617.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 12/Screenshot 2025-11-21 211718.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 12/Screenshot 2025-11-21 211812.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="locust_breakpoint.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/puntoQuiebre/main/locust_breakpoint.py"></span>
+                                    <span data-filename="locust_breakpoint_balanced.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/puntoQuiebre/main/locust_breakpoint_balanced.py"></span>
+                                    <span data-filename="locust_breakpoint_extended.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/puntoQuiebre/main/locust_breakpoint_extended.py"></span>
+                                    <span data-filename="locust_breakpoint_super_fast.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/puntoQuiebre/main/locust_breakpoint_super_fast.py"></span>
+                                    <span data-filename="locust_stress_ultimate.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/puntoQuiebre/main/locust_stress_ultimate.py"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="tarea-13">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #28a745;"><i class="fas fa-file-csv"></i></div>
+                                <h3>Tarea 13: Locust CSV feeder (users.csv)</h3>
+                            </div>
+                            <p class="description">Ejercicio de Locust que utiliza un archivo `users.csv` con credenciales reales para simular distintos usuarios en login y operaciones autenticadas.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Locust</span>
+                                <span class="tech-tag">CSV Feeder</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Load Testing</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="objective">Utilizar un feeder CSV (`users.csv`) para simular usuarios reales distintos en escenarios de login y operaciones que requieran autenticación, validando comportamiento y métricas por usuario.</div>
+                                <div class="intro">El uso de un archivo CSV permite modelar credenciales y datos por usuario en Locust, facilitando pruebas más realistas y el análisis de comportamiento por identidad.</div>
+                                <div class="development">Se incluye `locust_csv.py` que carga `users.csv` y alimenta los usuarios de Locust en las tareas de login y acciones autenticadas. Tras la ejecución se genera `reporte_csv.html` con métricas por usuario, latencias y tasas de error. El repositorio contiene además el archivo `users.csv` con las credenciales de prueba y una carpeta `imagenes` con capturas.</div>
+                                <div class="conclusion">El uso de CSV feeders en Locust permite simular escenarios más fieles al comportamiento real de múltiples usuarios, mejorando la calidad de las pruebas y la capacidad de identificar problemas relacionados con credenciales, permisos y datos por usuario.</div>
+                                <div class="learnings">Cómo configurar feeders CSV en Locust, cargar y mapear credenciales por usuario, análisis de métricas por identidad y buenas prácticas para manejo seguro de credenciales en pruebas (no subir credenciales reales en repos publicos).</div>
+                                <div class="github-link" data-url="https://github.com/interminableDgo/pruebaCSV"></div>
+                                <div class="practice-images">
+                                    <span data-image-url="img/Screenshots tarea 13/Screenshot 2025-11-21 212244.png"></span>
+                                    <span data-image-url="img/Screenshots tarea 13/Screenshot 2025-11-21 212644.png"></span>
+                                </div>
+                                <div class="code-files">
+                                    <span data-filename="locust_csv.py" data-raw-url="https://raw.githubusercontent.com/interminableDgo/pruebaCSV/main/locust_csv.py"></span>
+                                    <span data-filename="users.csv" data-raw-url="https://raw.githubusercontent.com/interminableDgo/pruebaCSV/main/users.csv"></span>
+                                    <span data-filename="reporte_csv.html" data-raw-url="https://raw.githubusercontent.com/interminableDgo/pruebaCSV/main/reporte_csv.html"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Detalles y Código</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="final-project">
@@ -988,6 +1366,27 @@
                                 <div class="learnings">Documentación de arquitectura de microservicios, diseño de APIs, planificación de la seguridad y validación de tecnologías.</div>
                                 <div class="pdf-files">
                                     <span data-filename="Reporte Formal - Avance 2.pdf" data-pdf-url="img/Reporte Formal - Avance 2.pdf"></span>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary open-modal-btn">Ver Documento</button>
+                        </div>
+                    </div>
+                    <div class="practice-card-wrapper">
+                        <div class="practice-card" id="evidence-final">
+                            <div class="practice-header">
+                                <div class="practice-icon" style="background: #343a40;"><i class="fas fa-chalkboard-teacher"></i></div>
+                                <h3>Presentación Final: Avance Final</h3>
+                            </div>
+                            <p class="description">Presentación final del proyecto (Avance Final) en formato PDF con la documentación y resultados consolidados.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Reporte</span>
+                                <span class="tech-tag">Presentación</span>
+                                <span class="tech-tag">PDF</span>
+                            </div>
+                            <div class="modal-info" style="display:none;">
+                                <div class="learnings">Documento final de presentación que resume el proyecto, arquitectura, pruebas y conclusiones del curso de Integración.</div>
+                                <div class="pdf-files">
+                                    <span data-filename="HeartGuard PP1.v3.pdf" data-pdf-url="img/HeartGuard PP1.v3.pdf"></span>
                                 </div>
                             </div>
                             <button class="btn btn-secondary open-modal-btn">Ver Documento</button>
